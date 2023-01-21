@@ -1,0 +1,70 @@
+
+
+
+
+// Ceci est un fichier qui traite des elements de Footer dans notre Fichier 
+// Lyrics 
+
+
+
+.footerSongs {
+    margin-top: .50em;
+    height: 5em;
+    background-color: rgb(245, 245, 245);
+   
+    @media (max-width: 400px) {
+      position: fixed;
+      left: 0;
+      bottom: 0;
+    }
+    
+    &__list {
+        @include resetList();
+        @include BetweenAlign();
+        padding: 0 2em;
+        height: 100%;
+
+        @media (max-width: 400px) {
+            @include flexCenter();
+        }
+      }
+
+      .footerSongs__item {
+        font-size: 1.144em;
+        font-weight: 600;
+        color: $colBasis;
+        transition: color .3s linear;
+
+        &:hover {
+          color: $colWhite-light;
+        }
+      }
+
+      &__link {
+        @include resetLink();
+
+        @media (max-width: 400px) {
+            display: none;
+        }
+      }
+      
+      &__link-pdf {
+        display: block;
+        background: transparent url('../img/image-pdf.svg') no-repeat center / cover;
+        width: 2em;
+        height: 2em;
+
+        @media (max-width: 400px) {
+          display: none;
+        }
+      }
+      
+      &__center  {
+           @include BetweenAlign();
+           min-width: 20em;
+
+           @media (max-width: 400px) {
+            @include flexCenter();
+        }
+      }
+}

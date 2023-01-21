@@ -1,0 +1,85 @@
+
+
+
+
+// DASHBOARD Milieu 
+
+
+.dashboard {
+    flex-grow: 1;
+    height: 100vh;
+    background-color: rgb(224, 224, 224);
+
+    
+    &__container {
+        @include flexCenter();
+        flex-direction: column;
+        height: 100%;
+        width: calc(100%);
+
+        @media (max-width: 387px) {
+            font-size: calc(0vw * 0 + .75em);
+        }
+    }
+    
+    &__preview {
+        padding: .52em .75em 1em .75em;
+        border-radius: 1.52em;
+        text-align: center;
+        background-color: $colWhite;
+        width: 45em;
+        box-shadow: 1px 2px 3px 2px rgb(192, 192, 192);;
+        height: 29em;
+
+        @media (max-width: 600px) {
+            width: 35em;
+            height: 32em;
+        }
+
+        @media (max-width: 387px) {
+            width: 29em;
+            height: 35em;
+            padding: 0 1em;
+        }
+    }
+
+    &__img {
+        margin-bottom: 1em;
+        object-fit: cover;
+        object-position: center center;
+        width: 12em;
+        height:auto;
+    }
+
+    &__title {
+        @include reset();
+        margin-bottom: .65em;
+    }
+
+    &__content {
+        margin: 0;
+        line-height: 124%;
+        word-spacing: 5px;
+        text-align: center;
+        color: #333;
+        max-width: 48em;
+    }
+
+    &__return {
+        position: absolute;
+        top: .85em;
+        padding: .25em .45em; 
+        border-radius: .5em;
+        transform: translateX(95%);
+        background-color: $colBasis-light;
+        transition: background-color .5s ease-in-out;
+        
+        &:hover {
+            background-color: $colBasisChocolate;
+        }
+    }
+
+    &__arrow {
+        color: $colWhite-light;
+    }
+}

@@ -1,0 +1,99 @@
+//Job_Kyungu_L
+//2022-12-11 -> Begin 
+
+
+//Section  Hero 
+
+.hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.836),rgba(0, 0, 0, 0.308)),url('../img/background1.jpg');
+    background-position: 100% 70%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    color: $colWhite;
+    &__container {
+        @include flexCenter();
+        height: 100%;
+    }
+
+    &__center {
+        text-align:center;
+        max-width: 45em;
+        min-height: auto;
+    }
+
+    &__title {
+        @include reset();
+        margin-bottom: 1em;
+        font-size: 3em;
+    }
+
+    &__sub-title {
+        @include reset();
+        margin-bottom: 1em;
+        font-size: 0.95em;
+        text-transform: uppercase;
+    }
+
+    &__content {
+        @include reset(); 
+        margin-bottom: 2.6em;  
+    }
+
+    &__bulle {
+        @include flex;
+        flex-direction: column;
+    }
+
+    &__bulle-i {
+        display: block;
+        margin-bottom: 2.95em;
+    }
+    
+    // &__arrow {
+    //     display: inline-block;
+    //     border-radius: 50%;
+    //     padding: 0.30em;
+    //     border: 1px solid $colWhite-Secondary;
+    //     animation: HeroArrow 0.95s ease-in-out infinite;
+
+    //     @keyframes HeroArrow {
+    //         0% {transform: translateY(0.20em);}
+    //         50% {transform: translateY(-0.45em);
+    //             color: $colBasis-light;
+    //             border-color: $colBasis-light;}
+    //         100% {transform: translateY(0em);}
+    //     }
+    // }
+
+    &__btn {
+        position: relative;
+        padding: 1em 1em;
+        @include resetBtn();
+        min-width: 9em;
+        border-radius: 0.50em;
+        cursor: pointer;
+        text-transform: uppercase;
+        color: $colWhite-Secondary;
+        background-color: $colBasis-light;
+        transition: background-color 0.5s ease-in-out;
+        
+        &:hover {
+            background-color: $colBasisChocolate;
+        }
+    }
+
+    &__link {
+        @include resetLink();
+        color:$colWhite-light;
+       
+        &::after {
+          content:"";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+        }
+    }
+}
