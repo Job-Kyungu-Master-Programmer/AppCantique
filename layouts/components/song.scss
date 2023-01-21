@@ -1,0 +1,131 @@
+
+
+
+//  Songs  For Display Cantiques 
+// En ce qui concerne les chansons c'est dans le fichier Lyrics 
+
+.song {
+    flex-grow: 1;
+    
+    &__header {
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 4em;
+        background: $colWhite;
+        width: 68%;
+
+        @media (max-width: 600px) {
+            left: 0;
+            width: 100%;
+        }
+
+        @media (max-width: 400px) {
+            position: fixed;
+        }
+    }
+
+    &-header__container {
+        padding: 0 2em;
+        @include BetweenAlign();
+        height: 100%;
+
+        @media (max-width: 390px) {
+            width: 150%;
+        }
+    }
+
+    &__list { 
+        @include resetList();
+        @include flexAlign();
+        
+        @media (max-width: 400px) {
+            position: fixed;
+            top: 3.55em;
+            left: 0;
+            flex-direction: column;
+            width: 15%;
+            height: 80%;
+        }
+    }
+
+    &__item {
+        margin-right: 1.50em;
+
+        @media (max-width: 400px) {
+            margin: 0;
+            margin-bottom: 1.50em;
+        }
+    }
+
+    &-header__link {
+        padding: .42em;
+        display: block;
+        @include flexCenter();
+        @include resetLink();
+        border-radius: .5em;
+        border: .1em solid $colWhite-Secondary;
+        transition: background-color .5s ease-in-out, color .3s linear, border 0.5s ease-in-out;
+
+        span {
+            font-weight: 500;
+            font-size: 1.25em;
+            color: #544;
+        }
+
+        &:hover {
+           border: .1em solid $colWhite-Secondary;
+           color: $colWhite-light;
+           background-color: $colWhite-light;
+        }
+    }
+
+    &__arrow {
+        padding: .35em;
+        border-radius: .5em;
+        color: $colWhite-Secondary;
+        background-color: $colBasisChocolate;
+
+        @media (max-width: 600px) {
+            padding: 0;
+            font-size: 2em;
+            width: 0.99em; height: .99em;
+        }
+    }
+
+    &-header__link-reply {
+        @include resetLink();
+        font-weight: 700;
+        text-transform: uppercase;
+        display: none;
+    }
+
+    &-header__link-active {
+        position: relative;
+        display: block;
+        @include flexCenter();
+        width: .75em;
+        height: .804em;
+        border-radius: 50%;
+        box-shadow: 0 0 0 0 rgb(194, 28, 28);
+        background-color: rgb(212, 32, 32);
+        animation: Pulse 0.95s ease-in-out infinite;
+
+            @keyframes Pulse {
+                to {
+                    box-shadow: 0 0 0 6px rgba(143, 22, 22, 0.26);
+                }
+            }
+
+    }
+
+    &__fixed-top {
+        @include flexCenter();
+        font-weight: 600;
+        text-transform: uppercase;
+        color: $colBlack;
+        background-color: $colWhite-Secondary;
+        height: 2.75em;
+        width: 100%;
+    }
+}

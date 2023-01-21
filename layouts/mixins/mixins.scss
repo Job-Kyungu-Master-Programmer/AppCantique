@@ -1,0 +1,93 @@
+
+
+
+
+// Mixins & Functions For Full Website 
+
+
+//Mixins 
+
+@mixin flex {
+    display: flex;
+}
+
+@mixin flexAlign {
+    display: flex;
+    align-items: center;
+}
+
+@mixin flexCenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin Between {
+    display: flex;
+    justify-content: space-between;
+}
+
+@mixin BetweenAlign {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@mixin Around {
+    display: flex;
+    justify-content: space-around;
+}
+
+@mixin AroundAlign {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+//Reset List 
+
+@mixin resetList {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+
+//Reset 
+@mixin reset {
+    margin: 0;
+    padding: 0;
+}
+
+//Reset Link 
+@mixin resetLink {
+    text-decoration: none;
+    color: inherit;
+}
+
+//Reset Button 
+@mixin resetBtn {
+    border: none;
+    outline: none;
+    text-align: center;
+    background: transparent;
+}
+
+
+@mixin i {
+    padding: 0.25em .25em; 
+            font-size: 1.25em;
+            font-weight: 900;
+            border-radius: .5em;
+            border: .1em solid $colIconBorder;
+            cursor: pointer;
+            color: $colBlack;
+            transition: background-color .5s ease-in-out , color .3s linear;
+            background-color: $colWhite;
+
+            &:hover {
+                color: $colWhite-Secondary;
+                background-color: $colBasisChocolate;
+            }
+}
