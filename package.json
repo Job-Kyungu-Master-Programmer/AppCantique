@@ -1,0 +1,11 @@
+{
+  "name": "pelerin",
+  "version": "1.0.0",
+  "description": "Cantique Du Pelerin \"Version-Web\"",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch layouts/main.scss:layouts/css/main.css"
+  },
+  "author": "JKL",
+  "license": "ISC"
+}

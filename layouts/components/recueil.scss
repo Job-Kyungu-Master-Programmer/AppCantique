@@ -1,0 +1,12 @@
+
+
+
+// Receuil Codes Principales pour L'affichage Du Recueil 
+
+
+.main__container {
+    background-color: $colWhite;
+    color: rgb(49, 49, 49);
+    @include flex();
+}
+
